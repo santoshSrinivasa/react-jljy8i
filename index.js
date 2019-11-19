@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
+import Anatta from "./Anatta";
+import Sample from "./Sample";
 import "./style.css";
+
 
 class App extends Component {
   constructor() {
@@ -23,6 +26,7 @@ class App extends Component {
   render() {
     return (
       <div>
+      <Anatta/>
         {this.state.data.map((resp, index) => {
           console.log("index", index);
           return (
