@@ -65,3 +65,36 @@ h1, p {
   text-align: center;
   background: #000000
 }
+
+.customCheckbox{
+    float:left;
+    width:30px;
+    height: 30px;
+    border-radius:50%;
+}
+
+.listStyle{
+  list-style-type: none;
+  display: flex;
+}
+
+.colorBorder{
+  border: 1px solid #d6d6d6
+}
+
+.colorMargin{
+  margin-left:30px;
+}
+
+.colorPanel{
+  width: 30%;
+  border: 1px solid lightgrey;
+}
+
+.buttonPanel{
+  color: black;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+  font-size: larger;
+  margin-left: 110px;
+}
