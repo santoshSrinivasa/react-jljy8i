@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
 
 class Product extends Component {
   constructor() {
@@ -20,7 +22,9 @@ class Product extends Component {
   }
   render() {
     return (
+      
       <div>
+      <Carousel>
         {this.state.data.map((resp, index) => {
           console.log("index", index);
           return (
@@ -45,6 +49,7 @@ class Product extends Component {
             </div>
           );
         })}
+        </Carousel>
       </div>
     );
   }
