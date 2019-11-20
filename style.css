@@ -98,3 +98,11 @@ h1, p {
   font-size: larger;
   margin-left: 110px;
 }
+
+.mainDivWidth{
+  width: 50%;
+}
+
+.mainDiv{
+  display: flex;
+}

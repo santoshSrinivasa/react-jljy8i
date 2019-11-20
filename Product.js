@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from 'react-responsive-carousel';
+import { Carousel } from "react-responsive-carousel";
 
 class Product extends Component {
   constructor() {
@@ -21,34 +21,33 @@ class Product extends Component {
     console.log(this.state.products);
   }
   render() {
+    var productId = [];
+    var uniqueArray = [];
     return (
-      
-      <div>
-      <Carousel>
-        {this.state.data.map((resp, index) => {
-          console.log("index", index);
-          return (
-            <div>
-              <img
-                style={{ width: 300, height: 300 }}
-                src={resp.url}
-                alt={resp.productId}
-              />
-              {this.state.products.map(
-                res =>
-                  res.id === resp.productId && (
-                    <form>
-                      <span>{res.name}</span>
-                      <span>{res.description}</span>
-                      <span style={{ color: res.color }}>{res.color}</span>
-                      <span>{res.price}</span>
-                      <span>{res.id}</span>
-                    </form>
-                  )
-              )}
-            </div>
-          );
-        })}
+      <div className="mainDivWidth">
+        <Carousel>
+          {this.state.data.map((resp, index) => {
+            return (
+              <div>
+                <img
+                  // style={{ width: 600, height: 270, marginTop: 10}}
+                  src={resp.url}
+                  alt={resp.productId}
+                />
+                {this.state.products.map(
+                  res =>
+                    res.id === resp.productId && (
+                      <form>
+                        <span>{res.name}</span>
+                        <span>{res.description}</span>
+                        <span>{res.price}</span>
+                        <span>{res.id}</span>
+                      </form>
+                    )
+                )}
+              </div>
+            );
+          })}
         </Carousel>
       </div>
     );
